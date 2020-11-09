@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../ex2.js"></script>
+    <title>Module 11</title>
+</head>
+<body>
+<nav class="menu">
+    <a href="../index.html">Задание 1</a>
+    <a class="active" href="exercise2.html">Задание 2</a>
+    <a href="exercise3.html">Задание 3</a>
+    <a href="exercise4.html">Задание 4</a>
+    <a href="exercise5.html">Задание 5</a>
+</nav>
+<div class="content">
+    <h3>Модуль 11. Решения заданий</h3>
+    <div class="content-center">
+        <h4>Задание 2.</h4>
+        <p>
+            Написать функцию, которая принимает на входе любое число (но не больше 1 000), определяет,
+            является ли оно простым, и выводит простое число или нет. Если введено больше 1 000, то выводится
+            сообщение, что данные неверны. Обратите внимание на числа 0 и 1.
+            Здесь вам пригодятся знания из предыдущего модуля — циклы и условные операторы.
+        </p>
+    </div>
+    <h4>Решение</h4>
+    <pre class="code">
+const primeOrCompositeNum = num => {
+    if (num > 1000) return 'Данные не верны. Ыыедите число до 1000'
+    if (num === 0) return 'num 0'
+    if (num === 1) return 'num 1'
+
+    for(let i = 2; i <= num/2; i++) {
+        if (num % i === 0 && num !== i) return 'composite'
+    }
+        return 'prime'
+}
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="ex1.js"></script>
+    <title>Module 11</title>
+</head>
+<body>
+<nav class="menu">
+    <a class="active" href="index.html">Задание 1</a>
+    <a href="templates/exercise2.html">Задание 2</a>
+    <a href="templates/exercise3.html">Задание 3</a>
+    <a href="templates/exercise4.html">Задание 4</a>
+    <a href="templates/exercise5.html">Задание 5</a>
+</nav>
+<div class="content">
+    <h3>Модуль 11. Решения заданий</h3>
+    <div class="content-center">
+        <h4>Задание 1.</h4>
+        <p>
+            Дан массив. Нужно вывести в консоль количество чётных и нечётных элементов в массиве.
+            Если в массиве есть нулевой элемент, то он учитывается и выводится отдельно.
+            При выполнении задания необходимо учесть, что массив может содержать не только числа, но и,
+            например, знаки, null и так далее.
+            Оформите решение в виде функции, постарайтесь дать этой функции корректное название,
+            вызовите функцию, проанализируйте синтаксис.
+        </p>
+    </div>
+    <h4>Решение</h4>
+    <pre class="code">
+const countEvenOddNumbers = arr => {
+    let oddNumbers = 0
+    let evenNumbers = 0
+    let zero = 0
+    let others = 0
+    arr.map(i => {
+        if (i === 0) return zero++
+        if (typeof i !== 'number') return others++
+        if (i%2 === 0) return evenNumbers++
+        return oddNumbers++
+    })
+    console.log('Четных чисел - ', evenNumbers)
+    console.log('Нечетных чисел - ', oddNumbers)
+    console.log('Нулей - ', zero)
+    console.log('Не числа - ', others)
+}
+</pre>
+</div>
+</body>
+</html>

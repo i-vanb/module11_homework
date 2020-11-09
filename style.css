@@ -1,0 +1,50 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    padding: 0 10px;
+}
+
+.code {
+    color: #84898C;
+}
+
+.btn {
+    background-color: #0F4C81;
+    border-width: 0;
+    color: #A58D7F;
+    outline-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #658DC6;
+    color: #F5B895;
+}
+
+.menu {
+    display: flex;
+}
+
+
+.active {
+    color: #e3a85f !important;
+}
+
+.menu a {
+    flex: 1;
+    padding: 10px;
+    background-color: #0F4C81;
+    text-decoration: none;
+    color: #fafafa;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #658DC6;
+}
+
+
